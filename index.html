@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafael Bello Lara — Senior Software Engineer (Java · Spring Boot · Microservices)</title>
+<meta name="description" content="Senior Software Engineer with 15+ years designing production-grade backend systems, microservices, and REST APIs for banking, financial services, and e-commerce. Java, Spring Boot, Kafka, AWS. Based in Sofia, Bulgaria.">
+<meta name="author" content="Rafael Bello Lara">
+<meta property="og:title" content="Rafael Bello Lara — Senior Software Engineer">
+<meta property="og:description" content="15+ years designing production-grade backend systems for banking, fintech, and e-commerce. Java · Spring Boot · Kafka · AWS.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0a0e17">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230a0e17'/%3E%3Ctext x='32' y='44' font-family='Georgia, serif' font-size='30' font-weight='700' fill='%23c9a25c' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
+<!-- machine-readable CV for AI / ATS parsers -->
+<link rel="alternate" type="text/markdown" href="Rafael_Bello_Lara_CV.md" title="Rafael Bello Lara — CV (Markdown)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* editorial navy + bronze — neutrals biased slightly warm toward the accent */
+    --bg:#0a0e17;
+    --bg-2:#0c111c;
+    --panel:#111725;
+    --panel-2:#0e131f;
+    --line:#212a3d;
+    --line-soft:#19202f;
+    --text:#eef1f7;
+    --text-2:#aab3c5;
+    --text-dim:#828da3;
+    --bronze:#c9a25c;
+    --bronze-2:#d8b877;
+    --bronze-soft:rgba(201,162,92,0.12);
+    --bronze-line:rgba(201,162,92,0.30);
+    --live:#5fb3a3;
+    --radius:10px;
+    --serif:'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+    --sans:'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono:'IBM Plex Mono', ui-monospace, 'Cascadia Code', Consolas, Menlo, monospace;
+    --maxw:1040px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:auto;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:16.5px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--bronze-soft); color:var(--bronze-2);}
+
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{margin:0; font-weight:600; letter-spacing:-0.01em; text-wrap:balance;}
+  p{margin:0;}
+
+  .skip-link{
+    position:absolute; left:-9999px; top:0; z-index:200;
+    background:var(--bronze); color:#1a1206; padding:.6em 1em;
+    font-family:var(--mono); font-size:.85rem; border-radius:0 0 8px 0;
+  }
+  .skip-link:focus{left:0;}
+  :focus-visible{outline:2px solid var(--bronze); outline-offset:3px; border-radius:2px;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  /* ------------------------------------------------ nav */
+  .nav{
+    position:sticky; top:0; z-index:100;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:saturate(150%) blur(12px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{display:flex; align-items:center; justify-content:space-between; height:66px;}
+  .brand{font-family:var(--serif); font-weight:600; font-size:1.1rem; color:var(--text); letter-spacing:-0.01em;}
+  .brand b{color:var(--bronze); font-weight:600;}
+  .nav-links{display:flex; gap:4px; list-style:none; margin:0; padding:0; font-size:.9rem;}
+  .nav-links a{
+    color:var(--text-2); padding:8px 13px; border-radius:7px; display:block;
+    transition:color .15s ease, background .15s ease;
+  }
+  .nav-links a:hover, .nav-links a.active{color:var(--bronze-2); background:var(--bronze-soft);}
+  .nav-cta{
+    font-size:.88rem; font-weight:600; color:#1a1206; background:var(--bronze);
+    padding:9px 16px; border-radius:7px; white-space:nowrap;
+    display:inline-flex; align-items:center; gap:7px; transition:filter .15s ease, transform .15s ease;
+  }
+  .nav-cta:hover{filter:brightness(1.07); transform:translateY(-1px);}
+  .nav-cta svg{width:15px; height:15px;}
+  .nav-toggle{display:none; width:38px; height:38px; align-items:center; justify-content:center;
+    background:none; border:1px solid var(--line); border-radius:8px; color:var(--text); cursor:pointer;}
+
+  @media (max-width: 820px){
+    .nav-links{
+      position:absolute; top:66px; left:0; right:0; flex-direction:column; gap:0;
+      background:var(--bg-2); border-bottom:1px solid var(--line);
+      max-height:0; overflow:hidden; transition:max-height .28s ease;
+    }
+    .nav-links.open{max-height:360px;}
+    .nav-links li{width:100%;}
+    .nav-links a{padding:15px 28px; border-radius:0; border-bottom:1px solid var(--line-soft);}
+    .nav-toggle{display:flex;}
+    .nav .nav-cta{display:none;}
+  }
+
+  /* ------------------------------------------------ hero */
+  .hero{padding:72px 0 0;}
+  .hero-grid{display:grid; grid-template-columns:1fr 260px; gap:48px; align-items:center;}
+  .eyebrow{
+    font-family:var(--mono); font-size:.8rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--bronze); margin-bottom:20px; display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow::after{content:""; height:1px; flex:1; background:var(--bronze-line); max-width:70px;}
+  .hero h1{
+    font-family:var(--serif); font-weight:600;
+    font-size:clamp(2.7rem, 6vw, 4.4rem); line-height:1.03; letter-spacing:-0.02em;
+    margin-bottom:18px;
+  }
+  .hero .subtitle{
+    font-size:clamp(1.05rem, 2vw, 1.3rem); color:var(--text); font-weight:500; margin-bottom:22px;
+  }
+  .hero .subtitle .sep{color:var(--bronze); margin:0 8px; font-weight:400;}
+  .hero .lede{max-width:56ch; color:var(--text-2); font-size:1.06rem; margin-bottom:32px;}
+
+  .hero-ctas{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn{
+    font-family:var(--sans); font-weight:600; font-size:.94rem;
+    padding:12px 22px; border-radius:8px; display:inline-flex; align-items:center; gap:9px;
+    transition:transform .15s ease, filter .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .btn svg{width:17px; height:17px; flex:none;}
+  .btn-primary{background:var(--bronze); color:#1a1206;}
+  .btn-primary:hover{filter:brightness(1.07); transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--line); color:var(--text);}
+  .btn-ghost:hover{border-color:var(--bronze-line); color:var(--bronze-2); transform:translateY(-1px);}
+
+  /* portrait */
+  .portrait-col{display:flex; flex-direction:column; align-items:center; gap:16px;}
+  .portrait{
+    width:210px; height:250px; border-radius:14px; overflow:hidden; position:relative;
+    border:1px solid var(--line); box-shadow:0 24px 60px -30px rgba(0,0,0,.8);
+  }
+  .portrait img{width:100%; height:100%; object-fit:cover; display:block;}
+  .portrait-fallback{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    background:
+      radial-gradient(120% 100% at 50% 0%, rgba(201,162,92,0.16), transparent 60%),
+      linear-gradient(160deg, var(--panel), var(--panel-2));
+    font-family:var(--serif); font-weight:600; font-size:4.4rem; color:var(--bronze);
+    letter-spacing:.02em;
+  }
+  .portrait-meta{font-family:var(--mono); font-size:.82rem; color:var(--text-dim); text-align:center; line-height:1.5;}
+  .portrait-meta .live{color:var(--live); display:inline-flex; align-items:center; gap:6px;}
+  .portrait-meta .live::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--live); box-shadow:0 0 0 3px rgba(95,179,163,.18);}
+
+  @media (max-width: 820px){
+    .hero{padding:52px 0 0;}
+    .hero-grid{grid-template-columns:1fr; gap:36px;}
+    .portrait-col{flex-direction:row; align-items:center; gap:20px; justify-content:flex-start;}
+    .portrait{width:120px; height:144px;}
+    .portrait-fallback{font-size:2.6rem;}
+    .portrait-meta{text-align:left;}
+  }
+
+  /* stats band */
+  .stats{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:0;
+    margin-top:64px; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+  }
+  .stat{padding:22px 24px; border-right:1px solid var(--line-soft);}
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:var(--serif); font-size:1.9rem; font-weight:600; color:var(--text); display:block; line-height:1;}
+  .stat .lbl{font-family:var(--mono); font-size:.74rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:.05em; margin-top:9px; display:block;}
+  @media (max-width: 640px){
+    .stats{grid-template-columns:repeat(2, 1fr);}
+    .stat:nth-child(2){border-right:none;}
+    .stat:nth-child(1), .stat:nth-child(2){border-bottom:1px solid var(--line-soft);}
+  }
+
+  /* ------------------------------------------------ sections */
+  .section{padding:88px 0; border-top:1px solid var(--line-soft);}
+  .section-label{
+    font-family:var(--mono); font-size:.8rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--bronze); margin-bottom:12px; display:block;
+  }
+  .section h2{font-family:var(--serif); font-size:clamp(1.7rem, 3.4vw, 2.3rem); font-weight:600; margin-bottom:34px; letter-spacing:-0.015em;}
+
+  .reveal{opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease;}
+  .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* about */
+  .about-body{max-width:68ch;}
+  .about-body p{color:var(--text-2); font-size:1.08rem; margin-bottom:18px;}
+  .about-body p strong{color:var(--text); font-weight:600;}
+  .about-facts{
+    display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:26px;
+    font-family:var(--mono); font-size:.86rem; color:var(--text-dim);
+  }
+  .about-facts span b{color:var(--bronze-2); font-weight:500;}
+
+  /* skills */
+  .skills{display:grid; gap:2px;}
+  .skill-row{display:grid; grid-template-columns:210px 1fr; gap:24px; padding:18px 0; border-bottom:1px solid var(--line-soft);}
+  .skill-row:last-child{border-bottom:none;}
+  .skill-key{font-family:var(--mono); font-size:.84rem; color:var(--text-dim); padding-top:5px; text-transform:uppercase; letter-spacing:.03em;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    font-family:var(--mono); font-size:.82rem; color:var(--text-2);
+    background:var(--panel-2); border:1px solid var(--line); border-radius:6px; padding:5px 11px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .chip:hover{border-color:var(--bronze-line); color:var(--bronze-2);}
+  .chip.key{border-color:var(--bronze-line); color:var(--bronze-2); background:var(--bronze-soft);}
+  @media (max-width: 640px){ .skill-row{grid-template-columns:1fr; gap:10px;} }
+
+  /* experience timeline */
+  .timeline{position:relative; padding-left:30px;}
+  .timeline::before{content:""; position:absolute; left:5px; top:8px; bottom:8px; width:1px; background:var(--line);}
+  .job{position:relative; padding-bottom:48px;}
+  .job:last-child{padding-bottom:0;}
+  .job::before{
+    content:""; position:absolute; left:-30px; top:7px; width:11px; height:11px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--bronze);
+  }
+  .job.current::before{background:var(--bronze); box-shadow:0 0 0 4px var(--bronze-soft);}
+  .job-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; margin-bottom:5px;}
+  .job-role{font-family:var(--serif); font-size:1.28rem; font-weight:600; color:var(--text);}
+  .job-co{color:var(--bronze-2); font-weight:600; font-size:1.05rem;}
+  .job-tag{
+    font-family:var(--mono); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--live); border:1px solid rgba(95,179,163,.4); border-radius:5px; padding:2px 7px;
+  }
+  .job-meta{font-family:var(--mono); font-size:.82rem; color:var(--text-dim); margin-bottom:16px;}
+  .job ul{margin:0 0 16px; padding-left:20px; color:var(--text-2);}
+  .job li{margin-bottom:8px;}
+  .job li::marker{color:var(--bronze);}
+  /* metric highlight — placeholder numbers; easy to find & edit (search: class="metric") */
+  .metric{color:var(--bronze-2); font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap;}
+  .job-tech{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px;}
+  .job-tech .tech-label{font-family:var(--mono); font-size:.76rem; color:var(--text-dim); margin-right:4px;}
+
+  /* education / cards */
+  .cards{display:grid; gap:14px;}
+  .card{border:1px solid var(--line); background:var(--panel); border-radius:var(--radius); padding:22px 24px;}
+  .card h3{font-family:var(--serif); font-size:1.15rem; font-weight:600; color:var(--text); margin-bottom:5px;}
+  .card .meta{font-family:var(--mono); font-size:.82rem; color:var(--text-dim);}
+
+  /* research */
+  .research-intro{color:var(--text-2); max-width:66ch; margin-bottom:22px; font-size:1.05rem;}
+  .pubs{list-style:none; margin:0; padding:0; counter-reset:pub;}
+  .pubs li{
+    counter-increment:pub; display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--line-soft); color:var(--text-2);
+  }
+  .pubs li:last-child{border-bottom:none;}
+  .pubs li::before{content:counter(pub, decimal-leading-zero); font-family:var(--mono); font-size:.85rem; color:var(--bronze); flex:none; padding-top:2px;}
+  .pubs em{color:var(--text-dim); font-style:italic;}
+
+  .langs{display:flex; gap:44px; flex-wrap:wrap; margin-top:34px;}
+  .lang .name{font-family:var(--serif); font-size:1.2rem; font-weight:600; color:var(--text);}
+  .lang .lvl{font-family:var(--mono); font-size:.82rem; color:var(--text-dim);}
+
+  /* contact */
+  .contact{
+    display:flex; flex-wrap:wrap; gap:36px; align-items:center; justify-content:space-between;
+    background:
+      radial-gradient(120% 140% at 100% 0%, rgba(201,162,92,0.07), transparent 55%),
+      var(--panel);
+    border:1px solid var(--line); border-radius:14px; padding:40px;
+  }
+  .contact-lead h3{font-family:var(--serif); font-size:1.55rem; font-weight:600; margin-bottom:8px;}
+  .contact-lead p{color:var(--text-2); max-width:44ch;}
+  .contact-links{list-style:none; margin:0; padding:0; display:grid; gap:14px; font-family:var(--mono); font-size:.92rem;}
+  .contact-links a{display:flex; align-items:center; gap:12px; color:var(--text-2); transition:color .15s ease;}
+  .contact-links a:hover{color:var(--bronze-2);}
+  .contact-links svg{width:18px; height:18px; flex:none; color:var(--bronze);}
+
+  /* footer */
+  .site-footer{border-top:1px solid var(--line-soft); padding:30px 0 44px;}
+  .site-footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+    font-family:var(--mono); font-size:.78rem; color:var(--text-dim);}
+
+  @media (max-width: 640px){
+    .section{padding:60px 0;}
+    .contact{padding:28px;}
+    .stats{margin-top:48px;}
+  }
+
+  /* ------------------------------------------------ print: clean one-column CV */
+  @media print{
+    :root{--bg:#fff; --text:#111; --text-2:#333; --text-dim:#555;}
+    body{background:#fff; color:#111; font-size:11pt;}
+    .nav, .hero-ctas, .nav-toggle, .contact-links svg, .site-footer, .portrait-meta .live{display:none !important;}
+    .section{padding:18px 0; border-top:1px solid #ccc; break-inside:avoid;}
+    .hero{padding:0;}
+    a{color:#111;}
+    .chip, .btn{border-color:#bbb; color:#222;}
+    .bronze, .job-co, .job-role, .hero h1, h2, h3{color:#111 !important;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rafael Bello Lara",
+  "givenName": "Rafael",
+  "familyName": "Bello Lara",
+  "jobTitle": "Senior Software Engineer",
+  "description": "Senior Software Engineer with 15+ years designing production-grade backend systems, microservices, and REST APIs for banking, financial services, and e-commerce. Java, Spring Boot, Kafka, AWS.",
+  "email": "r3ello@gmail.com",
+  "url": "https://www.linkedin.com/in/rafael-bello-lara-8522b112b/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sofia",
+    "addressCountry": "BG"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/rafael-bello-lara-8522b112b/"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Raisin GmbH"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Informatics Sciences, Havana"
+  },
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "MSc Applied Informatics" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Computer Science Engineer (Graduated with Honours)" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate", "name": "Scrum Foundation Professional Certificate (SFPC)" }
+  ],
+  "knowsLanguage": [
+    { "@type": "Language", "name": "Spanish" },
+    { "@type": "Language", "name": "English" }
+  ],
+  "knowsAbout": [
+    "Java", "Spring Boot", "Spring Framework", "Microservices", "REST API Design",
+    "Apache Kafka", "RabbitMQ", "Event-driven architecture", "Hibernate", "JPA",
+    "PostgreSQL", "MySQL", "MS SQL Server", "AWS", "Docker", "CI/CD", "OpenAPI",
+    "Apache Airflow", "Snowflake", "TDD", "Backend Development", "Software Architecture"
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">Rafael <b>Bello Lara</b></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="Rafael_Bello_Lara_CV.pdf" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 20h16"/></svg>
+      CV
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">Senior Software Engineer</span>
+          <h1>Rafael Bello Lara</h1>
+          <p class="subtitle">Backend Engineer<span class="sep">·</span>Java · Spring Boot · Microservices</p>
+          <p class="lede">I design and ship production-grade backend systems — microservices, REST APIs, and event-driven platforms — for banking, financial services, and e-commerce. 15+ years across teams in Cuba, Venezuela, the United States, and Germany, now based in Sofia.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="Rafael_Bello_Lara_CV.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 20h16"/></svg>
+              Download CV
+            </a>
+            <a class="btn btn-ghost" href="mailto:r3ello@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              Email
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/rafael-bello-lara-8522b112b/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="0.7" fill="currentColor"/><path d="M11 17v-4a2.5 2.5 0 015 0v4"/><line x1="11" y1="10" x2="11" y2="17"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="portrait-col">
+          <div class="portrait">
+            <img id="portraitImg" src="profile.jpg" alt="Rafael Bello Lara">
+            <div class="portrait-fallback" id="portraitFallback">RB</div>
+          </div>
+          <div class="portrait-meta">
+            Sofia, Bulgaria · GMT+2<br>
+            <span class="live">Open to opportunities</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span class="num">15+</span><span class="lbl">Years in Java</span></div>
+        <div class="stat"><span class="num">4</span><span class="lbl">Countries worked in</span></div>
+        <div class="stat"><span class="num">MSc</span><span class="lbl">Applied Informatics</span></div>
+        <div class="stat"><span class="num">SFPC</span><span class="lbl">Scrum certified</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="about">
+    <div class="wrap">
+      <span class="section-label">Profile</span>
+      <h2>About</h2>
+      <div class="about-body">
+        <p><strong>Senior Software Engineer with 15+ years of experience</strong> in backend development using Java, the Spring Framework, and Spring Boot. Proven track record designing and delivering scalable, production-grade microservices and RESTful APIs for international clients in the banking, financial services, and e-commerce industries.</p>
+        <p>I drive solution design from requirements through deployment, mentor junior and mid-level engineers, and work comfortably with client-facing responsibilities across multicultural teams. Strong hands-on expertise with J2EE, Hibernate, relational databases, Kafka, CI/CD pipelines, Docker, and AWS. Scrum Foundation certified, currently based in Sofia with travel and relocation flexibility.</p>
+        <div class="about-facts">
+          <span>Domains: <b>Banking · Fintech · E-commerce</b></span>
+          <span>Focus: <b>Microservices · REST · Kafka</b></span>
+          <span>Languages: <b>Spanish (native) · English (professional)</b></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="experience">
+    <div class="wrap">
+      <span class="section-label">Career</span>
+      <h2>Experience</h2>
+      <div class="timeline">
+
+        <div class="job current">
+          <div class="job-head"><span class="job-role">Senior Software Engineer</span><span class="job-co">Raisin GmbH</span><span class="job-tag">Current</span></div>
+          <div class="job-meta">Sep 2021 – Present · 4+ years · Sofia, Bulgaria</div>
+          <ul>
+            <li>Designed and delivered <b class="metric">20+</b> production microservices and common libraries of varying complexity using Java, Spring Boot, JPA, and Hibernate within a distributed architecture.</li>
+            <li>Defined and documented <b class="metric">9+</b> REST APIs with OpenAPI/Swagger, ensuring consistency and contract-first development.</li>
+            <li>Implemented Apache Kafka consumers and producers powering event-driven communication across <b class="metric">~2M</b> events/day.</li>
+            <li>Created and maintained microservice databases — schema design, migrations, and query optimization.</li>
+			<li>Designed and implemented an AWS Managed Airflow DAG to automate data synchronization and monitoring across Amazon RDS for MySQL, Snowflake, and Looker, improving data consistency and workflow reliability.
+.</li>
+            <li>Authored unit (JUnit, Mockito), integration, and component tests following TDD, sustaining <b class="metric">85%+</b> code coverage.</li>
+            <li>Mentored <b class="metric">2</b> junior and mid-level engineers through code reviews, pairing, and coding standards.</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-label">Stack</span>
+            <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">JPA</span><span class="chip">Hibernate</span><span class="chip">OpenAPI</span><span class="chip">Kafka</span><span class="chip">REST</span><span class="chip">GitLab CI/CD</span><span class="chip">AWS</span><span class="chip">Docker</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-role">Software Engineer</span><span class="job-co">BOSCH – ProCon</span></div>
+          <div class="job-meta">Mar 2021 – Aug 2021 · 6 months · Sofia, Bulgaria</div>
+          <ul>
+            <li>Implemented <b class="metric">5+</b> new REST API endpoints and extended existing services for a microservice-based platform.</li>
+            <li>Developed Kafka consumers and producers for asynchronous inter-service communication.</li>
+            <li>Created and updated microservice database schemas to support evolving business requirements.</li>
+            <li>Wrote unit, integration, and component tests, contributing to <b class="metric">85%+</b> code coverage.</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-label">Stack</span>
+            <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">JPA</span><span class="chip">Hibernate</span><span class="chip">REST</span><span class="chip">Kafka</span><span class="chip">Bitbucket</span><span class="chip">AWS</span><span class="chip">Docker</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-role">Architect / Backend Developer</span><span class="job-co">Curu Inc.</span></div>
+          <div class="job-meta">Jan 2018 – Mar 2021 · 3+ years · Charlotte, NC, USA (Remote)</div>
+          <ul>
+            <li>Designed and built a RESTful API (Java, Spring Boot, JAX-RS) helping <b class="metric">10k+</b> users manage personal credit through notifications and behavioral analytics.</li>
+            <li>Integrated <b class="metric">2</b> third-party financial platforms (Even Financial, Yodlee) for personalized offers and data synchronization.</li>
+            <li>Applied AI/ML techniques (K-Means clustering, association rules, multi-criteria decision making) for credit behavior analysis.</li>
+            <li>Architected an intelligent notification system advising users on credit management based on financial activity.</li>
+            <li>Developed serverless microservices on AWS (API Gateway, Lambda, DynamoDB) handling <b class="metric">1M+</b> requests/month, cutting infrastructure cost by <b class="metric">~30%</b> versus always-on services.</li>
+            <li>Led solution design as principal architect, guiding a team of <b class="metric">4</b> developers.</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-label">Stack</span>
+            <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">JAX-RS</span><span class="chip">REST</span><span class="chip">PostgreSQL</span><span class="chip">DynamoDB</span><span class="chip">AWS Lambda</span><span class="chip">API Gateway</span><span class="chip">Docker</span><span class="chip">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-role">Senior Software Developer</span><span class="job-co">Conoce Cuba</span></div>
+          <div class="job-meta">Sep 2015 – Dec 2017 · 2+ years · Havana, Cuba</div>
+          <ul>
+            <li>Developed the Conoce Cuba application for Windows — a geospatial tourism guide with map-based points of interest.</li>
+            <li>Engineered data pipelines exporting and processing datasets to SQLite databases consumed by multiple client applications.</li>
+            <li>Managed geospatial information systems for location services and map rendering.</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-label">Stack</span>
+            <span class="chip">C++</span><span class="chip">Qt</span><span class="chip">SQLite</span><span class="chip">Git</span><span class="chip">UNIX/Linux</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-role">Software Developer / Architect</span><span class="job-co">National Bank of Cuba — UCI</span></div>
+          <div class="job-meta">Oct 2014 – Jul 2015 · Havana, Cuba</div>
+          <ul>
+            <li>Led the technology transfer of the Quarxo Banking System to the National Bank of Cuba, managing end-to-end delivery.</li>
+            <li>Delivered Java technology training and business-process knowledge to banking operations teams.</li>
+            <li>Updated the SWIFT messaging subsystem to comply with evolving international standards.</li>
+            <li>Provided real-time production support for <b class="metric">4</b> core banking subsystems: Letters of Credit, Negotiations &amp; Payments, SWIFT Messaging, Accounting Open/Close.</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-label">Stack</span>
+            <span class="chip">Java</span><span class="chip">Spring</span><span class="chip">JPA</span><span class="chip">Hibernate</span><span class="chip">Jasper Reports</span><span class="chip">MS SQL Server</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-role">Software Developer → Chief Architect</span><span class="job-co">Quarxo Banking System — UCI</span></div>
+          <div class="job-meta">2011 – 2014 · 3 years · Havana, Cuba</div>
+          <ul>
+            <li>Developed the Letter of Credit subsystem and Transactions component for the national banking automation platform.</li>
+            <li>Promoted to Chief Architect based on technical leadership and delivery quality.</li>
+            <li>Led certification processes with external auditing firms (Segurmática, CONAS S.A.).</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-label">Stack</span>
+            <span class="chip">Java</span><span class="chip">Spring</span><span class="chip">JPA</span><span class="chip">Hibernate</span><span class="chip">Jasper Reports</span><span class="chip">MS SQL Server</span>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-role">Software Developer</span><span class="job-co">Export &amp; Commerce Bank C.A. (SABIC)</span></div>
+          <div class="job-meta">2010 – 2011 · Caracas, Venezuela</div>
+          <ul>
+            <li>Adapted the SABIC banking automation system to Venezuelan regulatory and financial standards.</li>
+            <li>Implemented the Trust Process module and integrated accounting with automated check issuance and printing.</li>
+            <li>Optimized daily Accounting Start and Close processes for improved system performance.</li>
+          </ul>
+          <div class="job-tech">
+            <span class="tech-label">Stack</span>
+            <span class="chip">Visual FoxPro</span><span class="chip">MS SQL Server</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="skills">
+    <div class="wrap">
+      <span class="section-label">Toolbox</span>
+      <h2>Technical skills</h2>
+      <div class="skills">
+        <div class="skill-row">
+          <div class="skill-key">Languages</div>
+          <div class="chips">
+            <span class="chip key">Java (15+ yrs)</span><span class="chip">J2EE</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">C++</span><span class="chip">PHP</span><span class="chip">JavaScript</span><span class="chip">XML</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Frameworks</div>
+          <div class="chips">
+            <span class="chip key">Spring Boot</span><span class="chip">Spring Framework</span><span class="chip">Spring AOP</span><span class="chip">Spring Batch</span><span class="chip">Hibernate</span><span class="chip">JPA</span><span class="chip">JAX-RS</span><span class="chip">Django</span><span class="chip">ASP.NET MVC</span><span class="chip">LangChain4j</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Web & protocols</div>
+          <div class="chips">
+            <span class="chip">REST</span><span class="chip">SOAP</span><span class="chip">JSON</span><span class="chip">XML</span><span class="chip">HTTP</span><span class="chip">OpenAPI / Swagger</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Databases</div>
+          <div class="chips">
+            <span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">MS SQL Server</span><span class="chip">Oracle</span><span class="chip">SQLite</span><span class="chip">Neo4j</span><span class="chip">DynamoDB</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Messaging</div>
+          <div class="chips">
+            <span class="chip key">Apache Kafka</span><span class="chip key">Rabbit MQ</span><span class="chip">Producers & consumers</span><span class="chip">Event-driven</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Cloud & DevOps</div>
+          <div class="chips">
+            <span class="chip">AWS (API Gateway, Lambda, DynamoDB, EC2)</span><span class="chip">Docker</span><span class="chip">Digital Ocean</span><span class="chip">Jenkins</span><span class="chip">GitLab CI</span><span class="chip">Maven</span><span class="chip">Gradle</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Testing</div>
+          <div class="chips">
+            <span class="chip">JUnit</span><span class="chip">Mockito</span><span class="chip">Integration testing</span><span class="chip">Component testing</span><span class="chip">TDD</span>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-key">Practices & tools</div>
+          <div class="chips">
+            <span class="chip">Microservices architecture</span><span class="chip">Design patterns</span><span class="chip">REST API design</span><span class="chip">Agile / Scrum</span><span class="chip">Code review</span><span class="chip">Technical mentoring</span><span class="chip">Git</span><span class="chip">Jira / Confluence</span><span class="chip">n8n</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="education">
+    <div class="wrap">
+      <span class="section-label">Academics</span>
+      <h2>Education</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>MSc — Applied Informatics</h3>
+          <div class="meta">University of Informatics Sciences, Havana · 2012 – 2014</div>
+        </div>
+        <div class="card">
+          <h3>Computer Science Engineer — Graduated with Honours</h3>
+          <div class="meta">University of Informatics Sciences, Havana · 2005 – 2010</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="research">
+    <div class="wrap">
+      <span class="section-label">Publications</span>
+      <h2>Research</h2>
+      <p class="research-intro">Published researcher in Artificial Intelligence and Applied Computing, with results in internationally recognized scientific journals.</p>
+      <ol class="pubs">
+        <li>Compensatory Fuzzy Logic for Intelligent Social Network Analysis</li>
+        <li>Model for Static Analysis in Fuzzy Graphs Based on Composite Centrality Indicators</li>
+        <li>Static Analysis of Scientific Collaboration Networks &nbsp;<em>— Cuban Journal of Computer Science</em></li>
+        <li>Technique for Static Network Analysis Based on Fuzzy Logic and Aggregation Operators</li>
+      </ol>
+      <div class="langs">
+        <div class="lang"><div class="name">Spanish</div><div class="lvl">Native</div></div>
+        <div class="lang"><div class="name">English</div><div class="lvl">Professional working proficiency</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="contact">
+    <div class="wrap">
+      <span class="section-label">Get in touch</span>
+      <h2>Contact</h2>
+      <div class="contact">
+        <div class="contact-lead">
+          <h3>Open to new opportunities</h3>
+          <p>Senior backend / Java roles, remote or on-site. Based in Sofia, Bulgaria, with travel and relocation flexibility.</p>
+        </div>
+        <ul class="contact-links">
+          <li><a href="mailto:r3ello@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>r3ello@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/rafael-bello-lara-8522b112b/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="0.7" fill="currentColor"/><path d="M11 17v-4a2.5 2.5 0 015 0v4"/><line x1="11" y1="10" x2="11" y2="17"/></svg>linkedin.com/in/rafael-bello-lara</a></li>
+          <li><a href="Rafael_Bello_Lara_CV.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 20h16"/></svg>Download CV (PDF)</a></li>
+          <li><a href="Rafael_Bello_Lara_CV.md" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 9l-3 3 3 3"/><path d="M16 9l3 3-3 3"/><line x1="13" y1="7" x2="11" y2="17"/></svg>Machine-readable CV (Markdown)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year"></span> Rafael Bello Lara · Sofia, Bulgaria</span>
+    <span>Senior Software Engineer · Java · Spring Boot · Microservices</span>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // portrait fallback to monogram when profile.jpg is absent
+  (function(){
+    var img = document.getElementById('portraitImg');
+    var fb = document.getElementById('portraitFallback');
+    function showFallback(){ img.style.display = 'none'; fb.style.display = 'flex'; }
+    if(img.complete && img.naturalWidth === 0){ showFallback(); }
+    img.addEventListener('error', showFallback);
+    img.addEventListener('load', function(){ if(img.naturalWidth > 0){ fb.style.display = 'none'; } });
+  })();
+
+  // active nav link on scroll
+  var links = document.querySelectorAll('.nav-links a');
+  var navObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        links.forEach(function(l){ l.classList.remove('active'); });
+        var current = document.querySelector('.nav-links a[href="#' + entry.target.id + '"]');
+        if(current) current.classList.add('active');
+      }
+    });
+  }, {rootMargin: '-45% 0px -50% 0px'});
+  document.querySelectorAll('main section[id]').forEach(function(s){ navObserver.observe(s); });
+
+  // reveal on scroll
+  var revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('in'); revealObserver.unobserve(entry.target); }
+    });
+  }, {threshold: 0.08});
+  document.querySelectorAll('.reveal').forEach(function(el){ revealObserver.observe(el); });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
