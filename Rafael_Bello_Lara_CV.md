@@ -1,7 +1,6 @@
 <!--
   Machine-readable CV for Rafael Bello Lara.
   Purpose: plain-text/Markdown version optimized for AI/LLM and ATS parsing.
-  Source of truth for content & metrics: index.html (site). Keep this file, index.html, and the PDF in sync.
   -->
 
 # Rafael Bello Lara
